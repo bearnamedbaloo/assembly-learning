@@ -52,6 +52,50 @@ jobs:
         cd labs/01_stack_and_calls_x86_64
         pytest tests/ -v
 
+    - name: Build Lab 02 (Control Flow)
+      run: |
+        cd labs/02_control_flow_x86_64
+        make clean
+        make all
+
+    - name: Test Lab 02
+      run: |
+        cd labs/02_control_flow_x86_64
+        pytest tests/ -v
+
+    - name: Build Lab 03 (Arrays)
+      run: |
+        cd labs/03_arrays_x86_64
+        make clean
+        make all
+
+    - name: Test Lab 03
+      run: |
+        cd labs/03_arrays_x86_64
+        pytest tests/ -v
+
+    - name: Build Lab 04 (Strings)
+      run: |
+        cd labs/04_strings_x86_64
+        make clean
+        make all
+
+    - name: Test Lab 04
+      run: |
+        cd labs/04_strings_x86_64
+        pytest tests/ -v
+
+    - name: Build Lab 05 (File I/O)
+      run: |
+        cd labs/05_file_io_x86_64
+        make clean
+        make all
+
+    - name: Test Lab 05
+      run: |
+        cd labs/05_file_io_x86_64
+        pytest tests/ -v
+
     - name: Run all tests
       run: |
         pytest labs/ -v --ignore=labs/_TEMPLATE_LAB

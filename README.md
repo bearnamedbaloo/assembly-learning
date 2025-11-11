@@ -92,7 +92,10 @@ Each lab introduces new concepts while building on previous knowledge.
 |-----|-------|------------------|
 | [00](labs/00_hello_x86_64/) | Hello World | Syscalls, program structure, sections |
 | [01](labs/01_stack_and_calls_x86_64/) | Functions & ABI | Calling convention, stack frames, C interop |
-| _More labs coming soon..._ | | |
+| [02](labs/02_control_flow_x86_64/) | Control Flow | Conditional jumps, loops, comparisons |
+| [03](labs/03_arrays_x86_64/) | Arrays | Memory addressing, array traversal, finding max |
+| [04](labs/04_strings_x86_64/) | Strings | Null-terminated strings, strlen, strcmp |
+| [05](labs/05_file_io_x86_64/) | File I/O | open, read, write, close syscalls, error handling |
 
 ## Repository Structure
 
@@ -100,7 +103,11 @@ Each lab introduces new concepts while building on previous knowledge.
 .
 ├─ labs/                        # Learning labs (start here!)
 │  ├─ 00_hello_x86_64/          # Lab 00: Hello World
-│  ├─ 01_stack_and_calls_x86_64/ # Lab 01: Functions
+│  ├─ 01_stack_and_calls_x86_64/ # Lab 01: Functions & ABI
+│  ├─ 02_control_flow_x86_64/   # Lab 02: Control Flow
+│  ├─ 03_arrays_x86_64/         # Lab 03: Arrays
+│  ├─ 04_strings_x86_64/        # Lab 04: Strings
+│  ├─ 05_file_io_x86_64/        # Lab 05: File I/O
 │  └─ _TEMPLATE_LAB/            # Template for new labs
 ├─ tooling/                     # Shared build infrastructure
 │  ├─ Makefile.common           # Common make rules
@@ -128,13 +135,18 @@ Each lab introduces new concepts while building on previous knowledge.
 
 1. **Lab 00**: Hello World - Get comfortable with assembly syntax and syscalls
 2. **Lab 01**: Functions - Learn the System V calling convention
-3. **More labs**: Coming soon! Topics will include:
-   - Control flow (branches, loops)
-   - Memory operations (arrays, strings)
-   - Bitwise operations
-   - File I/O
-   - Data structures
-   - Advanced topics (signals, threading, etc.)
+3. **Lab 02**: Control Flow - Master conditional jumps and loops
+4. **Lab 03**: Arrays - Work with memory and array operations
+5. **Lab 04**: Strings - Implement string manipulation functions
+6. **Lab 05**: File I/O - Read and write files using syscalls
+
+### Future Topics
+
+Additional labs coming soon:
+- Bitwise operations and bit manipulation
+- Data structures (linked lists, stacks, queues)
+- Floating-point operations
+- Advanced topics (signals, threading, inline assembly, etc.)
 
 ### Key Resources
 
