@@ -1,0 +1,33 @@
+# Build artifacts
+build/
+*.o
+*.out
+*.obj
+*.bin
+*.elf
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+dist/
+.coverage
+htmlcov/
+
+# OS
+.DS_Store
+Thumbs.db
+*.log
+
+# Temporary files
+*.tmp
+*.bak

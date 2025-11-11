@@ -1,0 +1,35 @@
+# Common Makefile for Assembly Labs
+# Include this in individual lab Makefiles with: include ../../tooling/Makefile.common
+
+# Toolchain
+NASM := nasm
+LD := ld
+CC := gcc
+OBJDUMP := objdump
+
+# Flags
+NASM_FLAGS := -felf64 -g -F dwarf
+LD_FLAGS :=
+CC_FLAGS := -no-pie -g
+
+# Architecture
+ARCH := x86_64
+
+# Pattern rules for assembly
+%.o: %.asm
+	$(NASM) $(NASM_FLAGS) $< -o $@
+
+# Common targets (individual Makefiles should define their own 'all' and binary target)
+.PHONY: clean run debug disasm
+
+clean:
+	rm -f *.o $(TARGET) $(BINARY)
+
+run: $(TARGET)
+	./$(TARGET)
+
+debug: $(TARGET)
+	gdb -q ./$(TARGET)
+
+disasm: $(TARGET)
+	$(OBJDUMP) -d -M intel ./$(TARGET)
