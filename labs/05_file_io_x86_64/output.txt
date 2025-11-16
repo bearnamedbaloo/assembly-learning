@@ -1,0 +1,4 @@
+Hello from assembly!
+This is a test file for file I/O operations.
+We're learning how to read and write files using Linux syscalls.
+Assembly programming is powerful!

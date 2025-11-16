@@ -9,6 +9,8 @@
 ; - String comparison
 ; - Character operations
 
+DEFAULT REL                 ; Use RIP-relative addressing by default (recommended for modern code)
+
 section .data
     str1 db "Hello, Assembly!", 0    ; Null-terminated string
     str2 db "Hello, Assembly!", 0    ; Same string

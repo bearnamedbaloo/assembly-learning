@@ -17,9 +17,14 @@ $(TARGET): file_copy.o
 # Specify dependencies
 file_copy.o: file_copy.asm
 
-# Override clean to also remove output files
-clean:
-	rm -f *.o $(TARGET) output.txt
+# Additional clean target to remove test output files
+cleantest:
+	rm -f output.txt
+
+# Make clean also run cleantest
+clean: cleantest
+
+.PHONY: cleantest
 
 # Test target
 test: $(TARGET)

@@ -8,6 +8,8 @@
 ; - Buffer management
 ; - sys_open, sys_read, sys_write, sys_close syscalls
 
+DEFAULT REL                 ; Use RIP-relative addressing by default (recommended for modern code)
+
 section .data
     ; Input and output filenames
     input_file db "input.txt", 0
@@ -60,11 +62,11 @@ _start:
 
     ; Open/create output file for writing
     ; flags: O_WRONLY | O_CREAT | O_TRUNC = 1 | 64 | 512 = 577 (0x241)
-    ; mode: 0644 (rw-r--r--)
+    ; mode: 0644 (rw-r--r--) = octal 644 = decimal 420 = hex 0x1A4
     mov rax, 2              ; sys_open
     mov rdi, output_file    ; filename
     mov rsi, 577            ; O_WRONLY | O_CREAT | O_TRUNC
-    mov rdx, 0644           ; Octal permissions
+    mov rdx, 0o644          ; Octal permissions (0o prefix for octal in NASM)
     syscall
 
     ; Check for error
