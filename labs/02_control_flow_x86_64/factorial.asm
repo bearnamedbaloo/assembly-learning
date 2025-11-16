@@ -8,6 +8,8 @@
 ; - Multiplication operation
 ; - Converting integer to string for output
 
+DEFAULT REL                 ; Use RIP-relative addressing by default (recommended for modern code)
+
 section .data
     prompt db "Factorial of ", 0
     prompt_len equ $ - prompt

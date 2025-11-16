@@ -8,6 +8,8 @@
 ; - Array traversal using loops
 ; - Finding maximum value
 
+DEFAULT REL                 ; Use RIP-relative addressing by default (recommended for modern code)
+
 section .data
     ; Define an array of integers (64-bit values)
     array dq 42, 17, 93, 8, 56, 31, 74, 19, 65, 28
